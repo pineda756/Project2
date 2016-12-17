@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Artists</title>
+</head>
+<body>
+<h1>Artists</h1>
+<a href="/artist/add">Add New Artist</a> <br />
+
+<br />
+<table border="1">
+    <tr><th>Name</th><th>Real Name</th><th>Record Label</th><th>Description </th><th>Action</th>
+        <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/artist/?artist_id=<%= result[i].artist_id %>"><%= result[i].stage_name%></a></td>
+        <!--<td><a href="/album/?album_id=<%= result[i].album_id%>"><%= result[i].album_id%></a></td>-->
+        <td><%= result[i].real_name %></td>
+        <td><%= result[i].record_label %></td>
+        <td><%= result[i].description %></td>
+        <td><form action="/artist/delete/">
+                <input type="hidden" name="artist_id" id="artist_id" value="<%= result[i].artist_id %>" />
+                <input type="submit" value="Delete"/>
+            </form>
+        </td>
+    </tr>
+    <% } %>
+</table>
+<%- include("../includes/footer.ejs"); %>

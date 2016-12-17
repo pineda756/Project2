@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Artist - <% result[0].stage_name %></title>
+</head>
+<body>
+<h1>Artist</h1>
+<ul>
+    <li>Artist ID: <%= result[0].artist_id%></li>
+    <li>Stage Name: <%= result[0].stage_name %></li>
+    <li>Real Name: <%= result[0].real_name %></li>
+    <li>Description Name: <%= result[0].description %></li>
+</ul>
+<%- include("../includes/footer.ejs"); %>

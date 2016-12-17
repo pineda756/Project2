@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Albums</title>
+</head>
+<body>
+<h1>Albums</h1>
+<a href="/album/add">Add New Album</a> <br />
+
+<br />
+<table border="1">
+    <tr><th>Title</th><th>Genre</th><th>Year Release</th><th>Number of Tracks</th><th>Number of Images</th><th>Action</th>
+        <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/album/?album_number=<%= result[i].album_number %>"><%= result[i].title%></a></td>
+        <td><%= result[i].genre %></td>
+        <td><%= result[i].year_release %></td>
+        <td><%= result[i].num_tracks %></td>
+        <td><%= result[i].num_images %></td>
+        <td><form action="/album/delete/">
+                <input type="hidden" name="album_number" id="album_number" value="<%= result[i].album_number %>" />
+                <input type="submit" value="Delete"/>
+        </form>
+        </td>
+    </tr>
+    <% } %>
+</table>
+
+<%- include("../includes/footer.ejs"); %>

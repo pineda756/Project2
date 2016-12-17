@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Add New Instrument</title>
+</head>
+<body>
+<h1>Add New Instrument</h1>
+<form action="/instrument/insert" method="get">
+    Instrument: <input id="instrument" name="instrument" type="text" />
+    Tabs: <input id="tabs" name="tabs" type="text" />
+    Musical Score: <input id="music_score" name="music_score" type="text"/>
+    <br />
+    <br />
+
+    <input type="submit" />
+
+</form>
+<%- include("../includes/footer.ejs"); %>

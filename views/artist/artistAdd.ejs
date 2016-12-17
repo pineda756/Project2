@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Add New Artist</title>
+</head>
+<body>
+<h1>Add New Artist</h1>
+<form action="/artist/insert" method="get">
+
+    Artist Name: <input id="stage_name" name="stage_name" type="text" />
+    Record Label: <input id="record_label" name="record_label" type="text" />
+    Artist Real Name: <input id="real_name" name="real_name" type="text" />
+    Description: <input id="description" name="description" type="text" />
+    <br />
+    <br />
+
+    <input type="submit" />
+
+    </form>
+<%- include("../includes/footer.ejs"); %>

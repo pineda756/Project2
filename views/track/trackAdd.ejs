@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Add New Tracks</title>
+</head>
+<body>
+<h1>Add New Tracks</h1>
+<form action="/track/insert" method="get">
+    Song Title: <input id="title" name="title" type="text" />
+    Duration: <input id="duration" name="duration" type="text" />
+    <br />
+    <br />
+
+    <input type="submit" />
+
+</form>
+
+<%- include("../includes/footer.ejs"); %>

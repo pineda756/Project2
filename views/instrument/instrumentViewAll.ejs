@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Instruments</title>
+</head>
+<body>
+<h1>Instruments</h1>
+<a href="/instrument/add">Add New Instrument</a> <br />
+
+<br />
+<table border="1">
+    <tr><th>Instrument</th><th>Tabs</th><th>Musical Score</th><th>Action</th>
+        <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/instrument/?lesson_id=<%= result[i].lesson_id %>"><%= result[i].instrument %></a></td>
+        <td><%= result[i].tabs %></td>
+        <td><%= result[i].music_score %></td>
+        <td><form action="/instrument/delete/">
+                <input type="hidden" name="lesson_id" id="lesson_id" value="<%= result[i].lesson_id %>" />
+                <input type="submit" value="Delete"/>
+        </form>
+        </td>
+    </tr>
+    <% } %>
+</table>
+<%- include("../includes/footer.ejs"); %>

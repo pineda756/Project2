@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Instrument - <% result[0].instrument %></title>
+</head>
+<body>
+<h1>Instrument</h1>
+<ul>
+    <li>Lesson ID: <%= result[0].lesson_id%></li>
+    <li>Instrument: <%= result[0].instrument %></li>
+    <li>Tabs: <%= result[0].tabs %></li>
+    <li>Music Score: <%= result[0].music_score %></li>
+</ul>
+<%- include("../includes/footer.ejs"); %>
